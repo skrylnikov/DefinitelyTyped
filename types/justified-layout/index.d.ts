@@ -7,12 +7,12 @@
 /**
  * An item to be layout.
  */
-type JustifiedLayoutItem = number | { width: number; height: number };
+export type JustifiedLayoutItem = number | { width: number; height: number };
 
 /**
  * Options for configuring the justified layout.
  */
-interface JustifiedLayoutOptions {
+export interface JustifiedLayoutOptions {
     /**
      * The width that boxes will be contained within irrelevant of padding.
      * @default 1060
@@ -80,7 +80,7 @@ interface JustifiedLayoutOptions {
 /**
  * Computed positional and sizing properties of a box in the layout.
  */
-interface LayoutBox {
+export interface LayoutBox {
     /**
      * Aspect ratio of the box.
      */
@@ -106,7 +106,7 @@ interface LayoutBox {
 /**
  * Results from calculating the justified layout.
  */
-interface JustifiedLayoutResult {
+export interface JustifiedLayoutResult {
     /**
      * Height of the container containing the justified layout.
      */
@@ -126,4 +126,4 @@ declare function createJustifiedLayout(
     options?: JustifiedLayoutOptions,
 ): JustifiedLayoutResult;
 
-export = createJustifiedLayout;
+export default createJustifiedLayout;
